@@ -25,3 +25,5 @@ Sprint 4 – Enhancements & Polish
 - PB-12: Notifications for group updates
 - PB-13: Suggested study partners (optional)
 - PB-16: Mobile-friendly interface (optional)
+
+understanding branching
