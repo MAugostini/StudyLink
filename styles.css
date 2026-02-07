@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar {
+    background-color: #7c7c7c;
+    height: 60px;
+    display: flex;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.829);
+}
+
+.navbar_container_left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+}
+
+.navbar_container_center {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#navbar_logo {
+    background-color: #ff000093;
+    background-image: linear-gradient(to top, #ff0000, #ffadad);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ff000093;
+    background-image: linear-gradient(to top, #ff0000, #ffadad);
+    color: #131313;
+    font-size: 16px;
+    font-weight: bold;
+}
