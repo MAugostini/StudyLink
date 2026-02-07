@@ -16,12 +16,16 @@ app.use(express.json());
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+  .then(() => {
+    console.log('MongoDB connected');
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
-});
+    // Start server **after DB is connected**
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running on port ${process.env.PORT}`);
+    });
+
+  })
+  .catch(err => console.error('MongoDB connection error:', err));
 
 const User = require('./models/User');
 
@@ -51,3 +55,22 @@ app.post('/register', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
+const Student = require('./models/Student');
+
+app.post('/students', async (req, res) => {
+  console.log('Request body:', req.body); // Debug: see what data arrives
+  try {
+    const student = new Student(req.body);
+    const savedStudent = await student.save();
+    console.log('Student saved:', savedStudent); // Confirm saved
+    res.json(savedStudent);
+  } catch (err) {
+    console.error('Error saving student:', err); // See exactly what failed
+    res.status(400).json({ error: err.message });
+  }
+});
+
+
+
+
