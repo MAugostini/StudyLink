@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container_left">
+            <ul class="navbar_menu">
+                <li class="navbar_btn">
+                    <a href="./Register.html" class="button">Register</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="./Signin.html" class="button">Sign In</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar_container_center">
+            <a href="./Home.html" id="navbar_logo">StudyLink</a>
+        </div>
+    </nav>
+    
+   
+    <div class="form-container">
+         <h2>Student Registration</h2>
+        <form id="studentForm" class="register-form">
+                <div class="form-row">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+
+                <div class="form-row">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-row">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="form-row">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                </div>
+
+                <div class="form-row">
+                    <label for="school">School</label>
+                    <input type="text" id="school" name="school">  
+                </div>
+            </form>
+
+            <label for="major">Major</label>
+                <select name="major" id="major" required>
+                    <option value="">-- Select Major --</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Systems">Information Systems</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Business">Business</option>
+                </select>
+
+            <label for="schoolYear">School Year</label>
+                <select name="schoolYear" id="schoolYear" required>
+                    <option value="">-- Select Year --</option>
+                    <option value="1">Freshman</option>
+                    <option value="2">Sophomore</option>
+                    <option value="3">Junior</option>
+                    <option value="4">Senior</option>
+                </select>
+
+                <fieldset>
+                    <legend>Preferred Study Style</legend>
+
+                    <label>
+                        <input type="checkbox" name="studyStyle" value="inperson">
+                        In-Person
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="studyStyle" value="virtual">
+                        Virtual
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="studyStyle" value="hybrid">
+                        Hybrid
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Availability</legend>
+
+                    <label>
+                        <input type="checkbox" name="days" value="monday">
+                        Monday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="tuesday">
+                        Tuesday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="wednesday">
+                        Wednesday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="thursday">
+                        Thursday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="friday">
+                        Friday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="saturday">
+                        Saturday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="days" value="sunday">
+                        Sunday
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="8am-10am">
+                        8am - 10am
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="10am-12pm">
+                        10am - 12pm
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="12pm-2pm">
+                        12pm - 2pm
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="time" value="2pm-4pm">
+                        2pm - 4pm
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="4pm-6pm">
+                        4pm - 6pm
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="6pm-8pm">
+                        6pm - 8pm
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="time" value="8pm-10pm">
+                        8pm - 10pm
+                    </label>
+                </fieldset>
+
+
+            <button class="RegisterButton" type="submit"><a href = "./Home.html">Register</a></button>
+        </form>
+    </div>
+    <script src="register.js"></script> 
+</body>
+</html>

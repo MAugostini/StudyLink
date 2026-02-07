@@ -6,7 +6,7 @@
 }
 
 .navbar {
-    background-color: #7c7c7c;
+    background-color: #7c7c7c1c;
     height: 60px;
     display: flex;
     position: sticky;
@@ -74,9 +74,83 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #ff000093;
+    background: #ff0000;
     background-image: linear-gradient(to top, #ff0000, #ffadad);
     color: #131313;
     font-size: 16px;
     font-weight: bold;
 }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: 600px;
+    outline: #131313 solid 1px;
+    margin: 50px 0 0 50px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.829);
+}
+
+.RegisterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+    margin-left: 145px;
+    margin-right: auto;
+    height: 25%;
+    width: 25%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ff0000;
+    background-image: linear-gradient(to top, #ff0000, #ffadad);
+    color: #131313;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+.register-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 140px 1fr; /* label and input columns */
+    gap: 25px;
+}
+
+.form-row label {
+  width: 110px;      /* controls label column width */
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: right; /* clean alignment */
+}
+
+.form-row input {
+  flex: 1;           /* input fills remaining space */
+  max-width: 225px;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.829);
+}
+
+
