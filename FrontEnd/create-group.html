@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyLink | Create Group</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-badge"></div>
+          <div class="brand-title">StudyLink</div>
+        </div>
+
+        <nav class="nav">
+          <a href="profile.html">My Profile</a>
+          <a class="active" href="create-group.html">Study Groups</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container" style="display:flex; justify-content:center;">
+        <section class="panel" style="width:min(560px, 92vw);">
+          <div class="panel-inner">
+            <h2 class="panel-title" style="text-align:center;">Create a Group</h2>
+
+            <form class="form">
+              <div class="field"><label>Group Name:</label><input type="text"/></div>
+
+              <div class="field">
+                <label>Course Name:</label>
+                <select>
+                  <option>Select course</option>
+                  <option>CS 101</option>
+                  <option>MATH 241</option>
+                  <option>ENG 130</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Meeting Time:</label>
+                <div class="checkbox-grid">
+                  <div class="check"><input type="checkbox"/> <span>8a-10a</span></div>
+                  <div class="check"><input type="checkbox"/> <span>4p-6p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>10a-12p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>6p-8p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>12p-2p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>8p-10p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>2p-4p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>10p-12a</span></div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Meeting Day:</label>
+                <div class="checkbox-grid">
+                  <div class="check"><input type="checkbox"/> <span>Sunday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Thursday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Monday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Friday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Tuesday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Saturday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Wednesday</span></div>
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Meeting Place:</label>
+                <div style="display:flex; gap:18px; flex-wrap:wrap;">
+                  <div class="check"><input type="checkbox"/> <span>Online</span></div>
+                  <div class="check"><input type="checkbox"/> <span>In-Person</span></div>
+                </div>
+              </div>
+
+              <div class="btn-row" style="justify-content:center;">
+                <button class="btn dark" type="button">Create Group</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      © StudyLink — create group
+    </footer>
+  </div>
+  <script src="auth.js"></script>
+</body>
+</html>

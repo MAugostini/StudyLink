@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyLink | Profile</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-badge"></div>
+          <div class="brand-title"><a href="./home.html">StudyLink</a></div>
+        </div>
+
+        <nav class="nav">
+          <a class="active" href="./profile.html">My Profile</a>
+          <a href="./find-groups.html">Study Groups</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container split">
+        <section class="panel">
+          <div class="panel-inner">
+            <h2 class="panel-title">My Profile</h2>
+
+            <form class="form">
+              <div class="field"><label>First Name:</label><input type="text"/></div>
+              <div class="field"><label>Last Name:</label><input type="text"/></div>
+              <div class="field"><label>Email Address:</label><input type="email"/></div>
+
+              <div class="field">
+                <label>Major:</label>
+                <select>
+                  <option>Select major</option>
+                  <option>Computer Science</option>
+                  <option>Business</option>
+                  <option>Biology</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>School Year:</label>
+                <select>
+                  <option>Select year</option>
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Preferred Format:</label>
+                <select>
+                  <option>Select format</option>
+                  <option>Online</option>
+                  <option>In-Person</option>
+                  <option>Hybrid</option>
+                </select>
+              </div>
+
+              <div class="field"><label>Group Size:</label><input type="text" placeholder="ex: 4"/></div>
+              <div class="field"><label>Username:</label><input type="text"/></div>
+              <div class="field"><label>Password:</label><input type="password"/></div>
+
+              <div class="field">
+                <label>Course Name:</label>
+                <select>
+                  <option>Select course</option>
+                  <option>CS 101</option>
+                  <option>MATH 241</option>
+                  <option>ENG 130</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Meeting Time:</label>
+                <div class="checkbox-grid">
+                  <div class="check"><input type="checkbox"/> <span>8a-10a</span></div>
+                  <div class="check"><input type="checkbox"/> <span>4p-6p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>10a-12p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>6p-8p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>12p-2p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>8p-10p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>2p-4p</span></div>
+                  <div class="check"><input type="checkbox"/> <span>10p-12a</span></div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Meeting Day:</label>
+                <div class="checkbox-grid">
+                  <div class="check"><input type="checkbox"/> <span>Sunday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Thursday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Monday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Friday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Tuesday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Saturday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Wednesday</span></div>
+                  <div></div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Meeting Place:</label>
+                <div style="display:flex; gap:18px; flex-wrap:wrap;">
+                  <div class="check"><input type="checkbox"/> <span>Online</span></div>
+                  <div class="check"><input type="checkbox"/> <span>In-Person</span></div>
+                </div>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn" type="button">Edit Profile</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <aside class="stack">
+          <div class="placeholder" style="min-height:260px;">
+            <div>
+              <div class="icon"></div>
+              <div>Profile Image Placeholder</div>
+            </div>
+          </div>
+
+          <div class="panel-lite">Biography Box</div>
+          <div class="panel-lite">List of Study Groups</div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      © StudyLink — profile
+    </footer>
+  </div>
+  <script src="auth.js"></script>
+
+</body>
+</html>

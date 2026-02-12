@@ -1,106 +1,47 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("studentForm");
+console.log("register.js loaded ✅");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+const form = document.getElementById("register-form");
 
-    /* ==========================
-       BASIC TEXT INPUTS
-    ========================== */
-    const Fname = document.getElementById("Fname").value.trim();
-    const Lname = document.getElementById("Lname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value;
-    const school = document.getElementById("school").value.trim();
-    const major = document.getElementById("major").value.trim();
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    /* ==========================
-       DROPDOWN (School Year)
-    ========================== */
-    const schoolYear = Number(
-      document.getElementById("schoolYear").value
-    );
+  const firstName = document.getElementById("first-name").value.trim();
+  console.log(document.getElementById("first-name"));
 
-    /* ==========================
-       CHECKBOXES (Study Style)
-    ========================== */
-    const studyStyle = Array.from(
-      document.querySelectorAll('input[name="studyStyle"]:checked')
-    ).map(cb => cb.value);
+  const lastName = document.getElementById("last-name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+  const major = document.getElementById("major").value;
+  const schoolYear = document.getElementById("school-year").value;
+  const groupSize = document.getElementById("group-size").value;
+  const availability = Array.from(document.querySelectorAll("#availability input[type=checkbox]"))
+    .filter(cb => cb.checked)
+    .map(cb => cb.nextElementSibling.textContent);
+  const meetingPreference = Array.from(document.querySelectorAll("#meeting-preference input[type=checkbox]"))
+    .filter(cb => cb.checked)
+    .map(cb => cb.nextElementSibling.textContent);
 
-    /* ==========================
-       AVAILABILITY (checkboxes)
-    ========================== */
-    const days = Array.from(
-      document.querySelectorAll('input[name="days"]:checked')
-    ).map(cb => cb.value);
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
 
-    const time = Array.from(
-      document.querySelectorAll('input[name="time"]:checked')
-    ).map(cb => cb.value);
+  const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    /* ==========================
-       COURSES (comma separated)
-    ========================== */
-    const coursesInput = document.getElementById("courses").value;
-    const courses = coursesInput
-      .split(",")
-      .map(course => course.trim())
-      .filter(course => course !== "");
+  // prevent duplicate username/email
+  const exists = users.some(u => u.username === username || u.email === email);
+  if (exists) {
+    alert("That username or email is already registered.");
+    return;
+  }
 
-    /* ==========================
-       FINAL OBJECT (MATCHES SCHEMA)
-    ========================== */
-    const studentData = {
-      Fname,
-      Lname,
-      email,
-      username,
-      password,
-      school,
-      major,
-      schoolYear,
-      courses,
-      availability: {
-        days,
-        time
-      },
-      preferences: {
-        studyStyle,
-        groupSize: Number(
-          document.getElementById("groupSize").value
-        )
-      }
-    };
+  const newUser = { firstName, lastName, email, username, password };
+  users.push(newUser);
 
-    console.log("Sending to server:", studentData);
+  localStorage.setItem("users", JSON.stringify(users));
 
-    /* ==========================
-       SEND TO EXPRESS
-    ========================== */
-    try {
-      const response = await fetch("http://localhost:3000/students", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(studentData)
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        alert(result.error || "Registration failed");
-        return;
-      }
-
-      alert("Student registered successfully!");
-      form.reset();
-
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Server connection failed");
-    }
-  });
+  alert("Registered! Now log in.");
+  window.location.href = "signin.html";
 });

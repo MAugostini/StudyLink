@@ -1,11 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyLink | Login</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    
+  <div class="page">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-badge"></div>
+          <div class="brand-title"><a href="./home.html">StudyLink</a></div>
+        </div>
+
+        <nav class="nav">
+          <a class="active" href="./signin.html">Login</a>
+          <a href="./register.html">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container split">
+        <section class="panel">
+          <div class="panel-inner">
+            <h2 class="panel-title" style="text-align:center;">User Login</h2>
+
+            <form class="form" id="signin-form">
+              <div class="field">
+                <label for="username">Username:</label>
+                <input id="username" type="text" placeholder="Enter username"/>
+              </div>
+
+              <div class="field">
+                <label for="password">Password:</label>
+                <input id="password" type="password" placeholder="Enter password"/>
+              </div>
+
+              <div class="btn-row" style="justify-content:center;">
+                <button class="btn" type="submit">Sign In</button>
+                <button class="btn secondary" type="button">Forget Password</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <div>
+          <img src="./images/login-group.jpg">
+            
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      © StudyLink — login
+    </footer>
+  </div>
+  <script src="signin.js"></script>
 </body>
 </html>

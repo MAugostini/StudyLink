@@ -1,182 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyLink | Registration</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar_container_left">
-            <ul class="navbar_menu">
-                <li class="navbar_btn">
-                    <a href="./Register.html" class="button">Register</a>
-                </li>
-                <li class="navbar_btn">
-                    <a href="./Signin.html" class="button">Sign In</a>
-                </li>
-            </ul>
+  <div class="page">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <div class="brand-badge"></div>
+          <div class="brand-title">StudyLink</div>
         </div>
-        <div class="navbar_container_center">
-            <a href="./Home.html" id="navbar_logo">StudyLink</a>
-        </div>
-    </nav>
-    
-   
-    <div class="form-container">
-         <h2>Student Registration</h2>
-        <form id="studentForm" class="register-form">
-                <div class="form-row">
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname">
-                </div>
 
-                <div class="form-row">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname">
-                </div>
+        <nav class="nav">
+          <a href="./home.html">Home</a>
+          <a href="./signin.html">Login</a>
+          <a class="active" href="./register.html">Register</a>
+        </nav>
+      </div>
+    </header>
 
-                <div class="form-row">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
+    <main class="main">
+      <div class="container split">
+        <section class="panel">
+          <div class="panel-inner">
+            <h2 class="panel-title">Registration</h2>
 
-                <div class="form-row">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
+            <form class="form" id ="register-form">
+              <div class="field" ><label>First Name:</label><input type="text" id="first-name"/></div>
+              <div class="field"><label>Last Name:</label><input type="text" id="last-name"/></div>
+              <div class="field"><label>Email Address:</label><input type="email" id="email"/></div>
+              <div class="field"><label>Username:</label><input type="text" id="username"/></div>
+              <div class="field"><label>Password:</label><input type="password" id="password"/></div>
+              <div class="field"><label>Confirm Password:</label><input type="password" id="confirm-password"/></div>
 
-                <div class="form-row">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
-                </div>
+              <div class="field" id="major">
+                <label>Major:</label>
+                <select>
+                  <option>Select major</option>
+                  <option>Computer Science</option>
+                  <option>Business</option>
+                  <option>Biology</option>
+                </select>
+              </div>
 
-                <div class="form-row">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword">
-                </div>
+              <div class="field" id="school-year">
+                <label>School Year:</label>
+                <select>
+                  <option>Select year</option>
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                </select>
+              </div>
 
-                <div class="form-row">
-                    <label for="school">School</label>
-                    <input type="text" id="school" name="school">  
+              <div class="field" id="group-size">
+                <label>Group Size:</label>
+                <select>
+                  <option>Select size</option>
+                  <option>2-4</option>
+                  <option>5-8</option>
+                  <option>9-12</option>
+                </select>
+              </div>
+
+              <div class="field" id="availability">
+                <label>Availability:</label>
+                <div class="checkbox-grid">
+                  <div class="check"><input type="checkbox"/> <span>Sunday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>8a-10a</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Monday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>10a-12p</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Tuesday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>12p-2p</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Wednesday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>2p-4p</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Thursday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>4p-6p</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Friday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>6p-8p</span></div>
+
+                  <div class="check"><input type="checkbox"/> <span>Saturday</span></div>
+                  <div class="check"><input type="checkbox"/> <span>8p-10p</span></div>
                 </div>
+              </div>
+
+              <div class="field" id="meeting-preference">
+                <label>Meeting Preference:</label>
+                <div style="display:flex; gap:18px; flex-wrap:wrap;">
+                  <div class="check"><input type="checkbox"/> <span>In-Person</span></div>
+                  <div class="check"><input type="checkbox"/> <span>Online</span></div>
+                </div>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn" type="submit" id="register">Register</button>
+              </div>
             </form>
+          </div>
+        </section>
 
-            <label for="major">Major</label>
-                <select name="major" id="major" required>
-                    <option value="">-- Select Major --</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Information Systems">Information Systems</option>
-                    <option value="Biology">Biology</option>
-                    <option value="Business">Business</option>
-                </select>
+        <aside class="placeholder">
+          <div>
+            <div class="icon"></div>
+            <div>Image Placeholder</div>
+          </div>
+        </aside>
+      </div>
+    </main>
 
-            <label for="schoolYear">School Year</label>
-                <select name="schoolYear" id="schoolYear" required>
-                    <option value="">-- Select Year --</option>
-                    <option value="1">Freshman</option>
-                    <option value="2">Sophomore</option>
-                    <option value="3">Junior</option>
-                    <option value="4">Senior</option>
-                </select>
-
-                <fieldset>
-                    <legend>Preferred Study Style</legend>
-
-                    <label>
-                        <input type="checkbox" name="studyStyle" value="inperson">
-                        In-Person
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="studyStyle" value="virtual">
-                        Virtual
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="studyStyle" value="hybrid">
-                        Hybrid
-                    </label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Availability</legend>
-
-                    <label>
-                        <input type="checkbox" name="days" value="monday">
-                        Monday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="tuesday">
-                        Tuesday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="wednesday">
-                        Wednesday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="thursday">
-                        Thursday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="friday">
-                        Friday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="saturday">
-                        Saturday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="days" value="sunday">
-                        Sunday
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="8am-10am">
-                        8am - 10am
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="10am-12pm">
-                        10am - 12pm
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="12pm-2pm">
-                        12pm - 2pm
-                    </label>
-                    
-                    <label>
-                        <input type="checkbox" name="time" value="2pm-4pm">
-                        2pm - 4pm
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="4pm-6pm">
-                        4pm - 6pm
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="6pm-8pm">
-                        6pm - 8pm
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="time" value="8pm-10pm">
-                        8pm - 10pm
-                    </label>
-                </fieldset>
-
-
-            <button class="RegisterButton" type="submit"><a href = "./Home.html">Register</a></button>
-        </form>
-    </div>
-    <script src="register.js"></script> 
+    <footer class="footer container">
+      © StudyLink — registration
+    </footer>
+  </div>
+  <script src="register.js"></script>
 </body>
 </html>
