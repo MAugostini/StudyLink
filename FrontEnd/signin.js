@@ -16,7 +16,7 @@ document.getElementById("signin-form").addEventListener("submit", (e) => {
   }
 
   // store who is logged in
-  localStorage.setItem("currentUser", JSON.stringify(match));
+  localStorage.setItem("currentUser", match.username);
 
   window.location.href = "home-loggedin.html"; // or profile.html
 });

@@ -13,15 +13,15 @@ form.addEventListener("submit", (e) => {
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
-  const major = document.getElementById("major").value;
-  const schoolYear = document.getElementById("school-year").value;
-  const groupSize = document.getElementById("group-size").value;
+  const major = document.getElementById("major").querySelector("select").value;
+  const schoolYear = document.getElementById("school-year").querySelector("select").value;
+  const groupSize = document.getElementById("group-size").querySelector("select").value;
   const availability = Array.from(document.querySelectorAll("#availability input[type=checkbox]"))
     .filter(cb => cb.checked)
-    .map(cb => cb.nextElementSibling.textContent);
+    .map(cb => cb.value);
   const meetingPreference = Array.from(document.querySelectorAll("#meeting-preference input[type=checkbox]"))
     .filter(cb => cb.checked)
-    .map(cb => cb.nextElementSibling.textContent);
+    .map(cb => cb.value);
 
   if (password !== confirmPassword) {
     alert("Passwords do not match.");
@@ -37,7 +37,19 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  const newUser = { firstName, lastName, email, username, password };
+  const newUser = {
+  firstName,
+  lastName,
+  email,
+  username,
+  password,
+  major,
+  schoolYear,
+  groupSize,
+  availability,
+  meetingPreference
+};
+
   users.push(newUser);
 
   localStorage.setItem("users", JSON.stringify(users));

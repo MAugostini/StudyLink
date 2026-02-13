@@ -12,12 +12,13 @@
       <div class="container topbar-inner">
         <div class="brand">
           <div class="brand-badge"></div>
-          <div class="brand-title"><a href="./home.html">StudyLink</a></div>
+          <div class="brand-title"><a href="#" id="brand-link">StudyLink</a></div>
         </div>
 
         <nav class="nav">
           <a class="active" href="./profile.html">My Profile</a>
           <a href="./find-groups.html">Study Groups</a>
+          <a  href="./home.html">Logout</a>
         </nav>
       </div>
     </header>
@@ -28,94 +29,79 @@
           <div class="panel-inner">
             <h2 class="panel-title">My Profile</h2>
 
-            <form class="form">
-              <div class="field"><label>First Name:</label><input type="text"/></div>
-              <div class="field"><label>Last Name:</label><input type="text"/></div>
-              <div class="field"><label>Email Address:</label><input type="email"/></div>
+            <form class="form" id ="register-form">
+              <div class="field" ><label>First Name:</label><input type="text" id="first-name" readonly/></div>
+              <div class="field"><label>Last Name:</label><input type="text" id="last-name" readonly/></div>
+              <div class="field"><label>Email Address:</label><input type="email" id="email" readonly/></div>
+              <div class="field"><label>Username:</label><input type="text" id="username" readonly/></div>
 
-              <div class="field">
+              <div class="field" id="major">
                 <label>Major:</label>
-                <select>
+                <select disabled>
                   <option>Select major</option>
-                  <option>Computer Science</option>
-                  <option>Business</option>
-                  <option>Biology</option>
+                  <option value="Computer Science" >Computer Science</option>
+                  <option value="Business" >Business</option>
+                  <option value="Biology" >Biology</option>
                 </select>
               </div>
 
-              <div class="field">
+              <div class="field" id="school-year">
                 <label>School Year:</label>
-                <select>
+                <select disabled>
                   <option>Select year</option>
-                  <option>Freshman</option>
-                  <option>Sophomore</option>
-                  <option>Junior</option>
-                  <option>Senior</option>
+                  <option value="Freshman">Freshman</option>
+                  <option value="Sophomore">Sophomore</option>
+                  <option value="Junior">Junior</option>
+                  <option value="Senior">Senior</option>
                 </select>
               </div>
 
-              <div class="field">
-                <label>Preferred Format:</label>
-                <select>
-                  <option>Select format</option>
-                  <option>Online</option>
-                  <option>In-Person</option>
-                  <option>Hybrid</option>
+              <div class="field" id="group-size">
+                <label>Group Size:</label>
+                <select disabled>
+                  <option>Select size</option>
+                  <option value="2-4">2-4</option>
+                  <option value="5-8">5-8</option>
+                  <option value="9-12">9-12</option>
                 </select>
               </div>
 
-              <div class="field"><label>Group Size:</label><input type="text" placeholder="ex: 4"/></div>
-              <div class="field"><label>Username:</label><input type="text"/></div>
-              <div class="field"><label>Password:</label><input type="password"/></div>
-
-              <div class="field">
-                <label>Course Name:</label>
-                <select>
-                  <option>Select course</option>
-                  <option>CS 101</option>
-                  <option>MATH 241</option>
-                  <option>ENG 130</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label>Meeting Time:</label>
+              <div class="field" id="availability" disabled>
+                <label>Availability:</label>
                 <div class="checkbox-grid">
-                  <div class="check"><input type="checkbox"/> <span>8a-10a</span></div>
-                  <div class="check"><input type="checkbox"/> <span>4p-6p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>10a-12p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>6p-8p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>12p-2p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>8p-10p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>2p-4p</span></div>
-                  <div class="check"><input type="checkbox"/> <span>10p-12a</span></div>
+                  <div class="check"><input type="checkbox" value="Sunday" disabled/> <span>Sunday</span></div>
+                  <div class="check"><input type="checkbox" value="8a-10a" disabled/> <span>8a-10a</span></div>
+
+                  <div class="check"><input type="checkbox" value="Monday" disabled/> <span>Monday</span></div>
+                  <div class="check"><input type="checkbox" value="10a-12p" disabled/> <span>10a-12p</span></div>
+
+                  <div class="check"><input type="checkbox" value="Tuesday" disabled/> <span>Tuesday</span></div>
+                  <div class="check"><input type="checkbox" value="12p-2p" disabled/> <span>12p-2p</span></div>
+
+                  <div class="check"><input type="checkbox" value="Wednesday" disabled/> <span>Wednesday</span></div>
+                  <div class="check"><input type="checkbox" value="2p-4p" disabled/> <span>2p-4p</span></div>
+
+                  <div class="check"><input type="checkbox" value="Thursday" disabled/> <span>Thursday</span></div>
+                  <div class="check"><input type="checkbox" value="4p-6p" disabled/> <span>4p-6p</span></div>
+
+                  <div class="check"><input type="checkbox" value="Friday" disabled/> <span>Friday</span></div>
+                  <div class="check"><input type="checkbox" value="6p-8p" disabled/> <span>6p-8p</span></div>
+
+                  <div class="check"><input type="checkbox" value="Saturday" disabled/> <span>Saturday</span></div>
+                  <div class="check"><input type="checkbox" value="8p-10p" disabled/> <span>8p-10p</span></div>
                 </div>
               </div>
 
-              <div class="field">
-                <label>Meeting Day:</label>
-                <div class="checkbox-grid">
-                  <div class="check"><input type="checkbox"/> <span>Sunday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Thursday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Monday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Friday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Tuesday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Saturday</span></div>
-                  <div class="check"><input type="checkbox"/> <span>Wednesday</span></div>
-                  <div></div>
-                </div>
-              </div>
-
-              <div class="field">
-                <label>Meeting Place:</label>
+              <div class="field" id="meeting-preference">
+                <label>Meeting Preference:</label>
                 <div style="display:flex; gap:18px; flex-wrap:wrap;">
-                  <div class="check"><input type="checkbox"/> <span>Online</span></div>
-                  <div class="check"><input type="checkbox"/> <span>In-Person</span></div>
+                  <div class="check"><input type="checkbox" value="In-Person" disabled/> <span>In-Person</span></div>
+                  <div class="check"><input type="checkbox" value="Online" disabled/> <span>Online</span></div>
                 </div>
               </div>
 
               <div class="btn-row">
-                <button class="btn" type="button">Edit Profile</button>
+                <button class="btn" type="submit" id="register"><a href="./edit-profile.html">Edit Profile</a></button>
               </div>
             </form>
           </div>
@@ -139,7 +125,8 @@
       © StudyLink — profile
     </footer>
   </div>
-  <script src="auth.js"></script>
 
+    <script src="nav.js"></script>
+  <script src="profile.js"></script>
 </body>
 </html>

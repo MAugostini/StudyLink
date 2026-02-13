@@ -234,6 +234,12 @@ select{
   background-color: black;
 }
 
+select:disabled{
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .checkbox-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
