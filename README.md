@@ -10,18 +10,15 @@ Sprint 1 – Foundation & Core Setup
 - PB-3: Set study preferences (course, availability, goals)
 
 Sprint 2 – Matching & Group Formation
-- PB-4: Search for study partners by course and time
-- PB-5: Create a study group
-- PB-6: Join a study group
+- PB-4: Create a study group
+- PB-5: Join a study group
+- PB-6: Search for study partners by course and time
 
 Sprint 3 – Communication & Accountability
 - PB-7: Centralized group communication
-- PB-8: Group leader management tools
-- PB-9: Schedule coordination based on preferences
-- PB-10: Attendance and accountability tracking
+- PB-8: Schedule coordination based on preferences
+- PB-9: Attendance and accountability tracking
 
 Sprint 4 – Enhancements & Polish
-- PB-11: View group activity status
-- PB-12: Notifications for group updates
-- PB-13: Suggested study partners (optional)
-- PB-16: Mobile-friendly interface (optional)
+- PB-10: View group activity status
+- PB-11: Notifications for group updates
