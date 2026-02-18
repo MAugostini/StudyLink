@@ -20,6 +20,7 @@ document.getElementById("username").value = currentUser.username || "";
 document.getElementById("major").querySelector("select").value = currentUser.major || "";
 document.getElementById("school-year").querySelector("select").value = currentUser.schoolYear || "";
 document.getElementById("group-size").querySelector("select").value = currentUser.groupSize || "";
+document.getElementById("biography-box").value = currentUser.biography || "";
 
 // availability checkboxes
 const savedAvailability = currentUser.availability || [];
@@ -42,6 +43,7 @@ document.getElementById("edit-profile-form").addEventListener("submit", (e) => {
     major: document.getElementById("major").querySelector("select").value,
     schoolYear: document.getElementById("school-year").querySelector("select").value,
     groupSize: document.getElementById("group-size").querySelector("select").value,
+    biography: document.getElementById("biography-box").value.trim(),
     availability: Array.from(document.querySelectorAll("#availability input[type=checkbox]"))
       .filter(cb => cb.checked)
       .map(cb => cb.value),

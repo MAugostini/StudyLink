@@ -55,5 +55,5 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("users", JSON.stringify(users));
 
   alert("Registered! Now log in.");
-  window.location.href = "signin.html";
+  window.location.href = "./home.html";
 });

@@ -19,7 +19,6 @@
           <a class="active  " href="profile.html">My Profile</a>
           <a href="./find-groups.html">Study Groups</a>
           <a href="./group-management.html">Group Management</a>
-          <a href="./home.html">Logout</a>
         </nav>
       </div>
     </header>
@@ -29,38 +28,48 @@
         <!-- Left column -->
         <section class="panel">
           <div class="panel-inner">
-            <h2 class="panel-title">Group Management</h2>
+            <h2 class="panel-title">Edit Group</h2>
 
-            <form class="form" id="group-management-form">
-              <div class="field"><label>Leader Name:</label><input type="text" id="leader-name" disabled/></div>
-              <div class="field"><label>Group Name:</label><input type="text" id="group-name" disabled/></div>
-              <div class="field"><label>Group Size:</label><input type="text" id="group-size" disabled/></div>
-              <div class="field"><label>Course Name:</label><input type="text" id="course-name" disabled/></div>
+            <form class="form" id="edit-group-form">
+              <div class="field"><label>Leader Name:</label><input type="text" id="leader-name" disabled /></div>
+              <div class="field"><label>Group Name:</label><input type="text" id="group-name" disabled /></div>
+              
+              <div class="field" id="group-size">
+                <label>Group Size:</label>
+                <select>
+                  <option>Select size</option>
+                  <option value="2-4">2-4</option>
+                  <option value="5-8">5-8</option>
+                  <option value="9-12">9-12</option>
+                </select>
+              </div>
+
+              <div class="field"><label>Course Name:</label><input type="text" id="course-name" style="background-color: black;"/></div>
 
               <div class="field">
                 <label>Meeting Time:</label>
                 <div class="checkbox-grid" id="meeting-time" >
-                  <div class="check"><input type="checkbox" value="8a-10a" disabled/> <span>8a-10a</span></div>
-                  <div class="check"><input type="checkbox" value="4p-6p" disabled/> <span>4p-6p</span></div>
-                  <div class="check"><input type="checkbox" value="10a-12p" disabled/> <span>10a-12p</span></div>
-                  <div class="check"><input type="checkbox" value="6p-8p" disabled/> <span>6p-8p</span></div>
-                  <div class="check"><input type="checkbox" value="12p-2p" disabled/> <span>12p-2p</span></div>
-                  <div class="check"><input type="checkbox" value="8p-10p" disabled/> <span>8p-10p</span></div>
-                  <div class="check"><input type="checkbox" value="2p-4p" disabled/> <span>2p-4p</span></div>
-                  <div class="check"><input type="checkbox" value="10p-12a" disabled/> <span>10p-12a</span></div>
+                  <div class="check"><input type="checkbox" value="8a-10a" /> <span>8a-10a</span></div>
+                  <div class="check"><input type="checkbox" value="4p-6p" /> <span>4p-6p</span></div>
+                  <div class="check"><input type="checkbox" value="10a-12p" /> <span>10a-12p</span></div>
+                  <div class="check"><input type="checkbox" value="6p-8p" /> <span>6p-8p</span></div>
+                  <div class="check"><input type="checkbox" value="12p-2p" /> <span>12p-2p</span></div>
+                  <div class="check"><input type="checkbox" value="8p-10p" /> <span>8p-10p</span></div>
+                  <div class="check"><input type="checkbox" value="2p-4p" /> <span>2p-4p</span></div>
+                  <div class="check"><input type="checkbox" value="10p-12a" /> <span>10p-12a</span></div>
                 </div>
               </div>
 
-              <div class="field" readonly>
+              <div class="field">
                 <label>Meeting Day:</label>
                 <div class="checkbox-grid" id="meeting-day">
-                  <div class="check"><input type="checkbox" value="Sunday" disabled/> <span>Sunday</span></div>
-                  <div class="check"><input type="checkbox" value="Thursday" disabled/> <span>Thursday</span></div>
-                  <div class="check"><input type="checkbox" value="Monday" disabled/> <span>Monday</span></div>
-                  <div class="check"><input type="checkbox" value="Friday" disabled/> <span>Friday</span></div>
-                  <div class="check"><input type="checkbox" value="Tuesday" disabled/> <span>Tuesday</span></div>
-                  <div class="check"><input type="checkbox" value="Saturday" disabled/> <span>Saturday</span></div>
-                  <div class="check"><input type="checkbox" value="Wednesday" disabled/> <span>Wednesday</span></div>
+                  <div class="check"><input type="checkbox" value="Sunday" /> <span>Sunday</span></div>
+                  <div class="check"><input type="checkbox" value="Thursday" /> <span>Thursday</span></div>
+                  <div class="check"><input type="checkbox" value="Monday" /> <span>Monday</span></div>
+                  <div class="check"><input type="checkbox" value="Friday" /> <span>Friday</span></div>
+                  <div class="check"><input type="checkbox" value="Tuesday" /> <span>Tuesday</span></div>
+                  <div class="check"><input type="checkbox" value="Saturday" /> <span>Saturday</span></div>
+                  <div class="check"><input type="checkbox" value="Wednesday" /> <span>Wednesday</span></div>
                   <div></div>
                 </div>
               </div>
@@ -68,15 +77,13 @@
               <div class="field">
                 <label>Meeting Place:</label>
                 <div style="display:flex; gap:18px; flex-wrap:wrap;" id="meeting-preference">
-                  <div class="check"><input type="checkbox" value="Online" disabled/> <span>Online</span></div>
-                  <div class="check"><input type="checkbox" value="In-Person" disabled/> <span>In-Person</span></div>
+                  <div class="check"><input type="checkbox" value="Online"/> <span>Online</span></div>
+                  <div class="check"><input type="checkbox" value="In-Person"/> <span>In-Person</span></div>
                 </div>
               </div>
 
               <div class="btn-row">
-                <button class="btn dark" type="submit" id="attend-btn">Attend Group</button>
-                <button class="btn" type="submit" id="leave-btn"><a href = "./find-groups.html"></a>Leave Group</button>
-                <button class="btn" type="submit" id="edit-btn"><a href="./edit-groups.html">Edit Group</a></button>
+                <button class="btn dark" type="submit" id="save-changes">Save Changes</button>
               </div>
             </form>
 
@@ -115,13 +122,13 @@
 
         <!-- Right column -->
         <aside class="stack">
-          <div class="panel-lite" id="group-bio" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: auto;">
-            <h3 style="margin: 0 0 10px 0; text-align: center;">Group Biography</h3>
-            <div id="group-bio-content" style="color: rgba(229,231,235,0.55); text-align: center;"></div>
-          </div>
+            <div class="panel-lite" id="group-bio-display" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: auto;">
+              <h3 style="margin: 0 0 10px 0; text-align: center;">Group Biography</h3>
+              <textarea id="group-bio-input" style="width: 100%; height: 120px; text-align: center;"></textarea>
+            </div>
           <div class="panel-lite" id="group-goals" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: auto;">
             <h3 style="margin: 0 0 10px 0; text-align: center;">Group Goals</h3>
-            <div id="group-goals-content" style="color: rgba(229,231,235,0.55); text-align: center;"></div>
+            <textarea id="group-goals-input" style="width: 100%; height: 120px; text-align: center;"></textarea>
           </div>
           <div class="panel-lite" id="chatbox">Chatbox <br/>(Opens when Joined)</div>
         </aside>
@@ -133,6 +140,6 @@
     </footer>
   </div>
   <script src="nav.js"></script>
-  <script src="group-management.js"></script>
+  <script src="edit-groups.js"></script>
 </body>
 </html>

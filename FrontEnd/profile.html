@@ -115,8 +115,14 @@
             </div>
           </div>
 
-          <div class="panel-lite">Biography Box</div>
-          <div class="panel-lite">List of Study Groups</div>
+          <div class="panel-lite" id="biography-display" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: auto;">
+            <h3 style="margin: 0 0 10px 0; text-align: center;">Biography</h3>
+            <textarea id="biography-box" style="width: 100%; height: 120px;" readonly></textarea>
+          </div>
+          <div class="panel-lite" style="display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; min-height: auto;">
+            <h3 style="margin: 0 0 10px 0; text-align: center;">My Study Groups</h3>
+            <div id="my-groups"></div>
+          </div>
         </aside>
       </div>
     </main>
