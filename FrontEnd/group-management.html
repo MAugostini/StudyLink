@@ -19,7 +19,6 @@
           <input type="text" class="nav-search" placeholder="Search groups...">
           <a class="active  " href="profile.html">My Profile</a>
           <a href="./find-groups.html">Study Groups</a>
-          <a href="./group-management.html">Group Management</a>
           <a href="./home.html">Logout</a>
         </nav>
       </div>
@@ -75,9 +74,9 @@
               </div>
 
               <div class="btn-row">
-                <button class="btn dark" type="submit" id="attend-btn">Attend Group</button>
-                <button class="btn" type="submit" id="leave-btn"><a href = "./find-groups.html"></a>Leave Group</button>
-                <button class="btn" type="submit" id="edit-btn"><a href="./edit-groups.html">Edit Group</a></button>
+                <button class="btn dark" type="button" id="attend-btn">Attend Group</button>
+                <button class="btn" type="button" id="leave-btn">Leave Group</button>
+                <button class="btn" type="button" id="edit-btn">Edit Group</button>
               </div>
             </form>
 
@@ -124,16 +123,28 @@
             <h3 style="margin: 0 0 10px 0; text-align: center;">Group Goals</h3>
             <div id="group-goals-content" style="color: rgba(229,231,235,0.55); text-align: center;"></div>
           </div>
-          <div class="panel-lite" id="chatbox">Chatbox <br/>(Opens when Joined)</div>
+          <div class="chatBot" id="group-chat">
+            <header>
+                <h2>Group Chat</h2>
+            </header>
+
+            <!-- chat uses logged-in user's name; no manual name input shown -->
+            <!--code from GeeksforGeeks-->
+            <ul class="chatbox" id="message-list" style="max-height:300px; overflow:auto;">
+              <!-- messages appended here -->
+            </ul>
+
+            <div class="chat-input">
+                <textarea id="message-input" rows="2" cols="17" placeholder="Enter a message..."></textarea>
+                <button class="btn" id="sendBTN">Send</button>
+            </div>
+          </div>
         </aside>
       </div>
     </main>
-
-    <footer class="footer container">
-      © StudyLink — group management
-    </footer>
   </div>
   <script src="nav.js"></script>
   <script src="group-management.js"></script>
+  <script type="module" src="group-chat.js"></script>
 </body>
 </html>
