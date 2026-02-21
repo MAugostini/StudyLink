@@ -3,7 +3,7 @@ console.log("group-management.js loaded ✅");
 function loadCurrentGroup() {
   const groups = JSON.parse(localStorage.getItem('groups')) || [];
 
-  let raw = localStorage.getItem('currentGroup') || localStorage.getItem('currentgroup') || null;
+  let raw = localStorage.getItem('selectedGroup') || localStorage.getItem('currentGroup') || localStorage.getItem('currentgroup') || null;
   let currentGroup = null;
 
   if (raw) {
