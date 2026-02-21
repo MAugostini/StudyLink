@@ -1,6 +1,6 @@
 // group-chat.js
 // Client-side group chat using Firebase Firestore.
-// TODO: Replace the firebaseConfig object with your project's credentials.
+//https://github.com/googleapis/java-firestore
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import {
